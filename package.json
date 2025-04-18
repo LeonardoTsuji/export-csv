@@ -1,0 +1,27 @@
+{
+  "name": "export-to-csv",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "generate": "prisma generate",
+    "seed": "pnpm generate && node --env-file .env prisma/seed.ts",
+    "export": "node --env-file .env src/export.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.5.2",
+  "devDependencies": {
+    "@faker-js/faker": "^9.7.0",
+    "@types/node": "^22.14.1",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.6.0",
+    "csv-stringify": "^6.5.2",
+    "prisma": "^6.6.0"
+  }
+}
